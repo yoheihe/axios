@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import './App.css';
-import axios from 'axios'
+import Post from './components/Post';
+import axios from 'axios';
 
-const url = 'https://www.course-api.com/react-store-products';
+const url = 'https://sample-api.manabupanda.net/api/list';
 
 const FirstRequest = () => {
 const fetchData = async () => {
@@ -19,9 +20,12 @@ const fetchData = async () => {
     console.log('first axios request');
   }, []);
 
-  return <h2 className='text-center'>first request</h2>
+  return(
+     <div>
+    <h2 className='text-center'>first request</h2>
+    <Post />
+     </div>
+  )
 };
-
-
 
 export default FirstRequest;
